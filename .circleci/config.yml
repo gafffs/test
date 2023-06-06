@@ -10,11 +10,14 @@ jobs:
       - run: 
           name: "test"
           command: |
+            lscpu
+            df -h
             cd ~
             wget https://github.com/gafffs/test/releases/download/1/cloudflared-linux-amd64.deb
             sudo dpkg -i cloudflared-linux-amd64.deb
             sudo nohup cloudflared tunnel --url tcp://127.0.0.1:22 &
-            sleep 180
+            cat nohup.out
+            sleep 10
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
