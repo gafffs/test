@@ -16,9 +16,9 @@ jobs:
             pwd
             wget https://github.com/gafffs/test/releases/download/1/cloudflared-linux-amd64.deb
             sudo dpkg -i cloudflared-linux-amd64.deb
-            sudo cloudflared tunnel --url tcp://127.0.0.1:22 &
+            sudo cloudflared tunnel --url tcp://127.0.0.1:22
 
-            sleep 10
+#            sleep 10
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
