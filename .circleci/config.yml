@@ -3,7 +3,7 @@ jobs:
   test:
     machine:
       image: ubuntu-2004:current
-    resource_class: 2xlarge
+    resource_class: large
 
     steps:
       - checkout
